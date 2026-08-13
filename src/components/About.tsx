@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageSquare, Check, Shield, User, Award, Eye } from 'lucide-react';
-import { COMPANY_INFO, getWhatsAppUrl, WHATSAPP_MESSAGES } from '../config/company';
+import { getWhatsAppUrl, WHATSAPP_MESSAGES } from '../config/company';
 
 export const About: React.FC = () => {
   return (
@@ -18,16 +18,16 @@ export const About: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
               
-              {/* Founder Overlay Badge */}
+              {/* Team Overlay Badge */}
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full navy-gradient-bg flex items-center justify-center text-white font-bold shrink-0 shadow-md">
                     <User className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="block text-slate-500 text-xs font-bold uppercase tracking-wider">Leadership</span>
-                    <span className="text-slate-900 font-extrabold text-base sm:text-lg block">Founder: {COMPANY_INFO.founder}</span>
-                    <span className="text-amber-600 text-xs font-semibold">Archway Construction Leadership</span>
+                    <span className="block text-slate-500 text-xs font-bold uppercase tracking-wider">Expert Team</span>
+                    <span className="text-slate-900 font-extrabold text-base sm:text-lg block">Construction & Engineering Team</span>
+                    <span className="text-amber-600 text-xs font-semibold">Dedicated Site Management</span>
                   </div>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export const About: React.FC = () => {
 
             {/* Main Statement */}
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6 font-medium">
-              <strong className="text-slate-950 font-bold">Archway Construction</strong> is led by Founder <strong className="text-amber-700 font-bold">{COMPANY_INFO.founder}</strong> and focuses on delivering dependable construction solutions with an emphasis on quality, transparency, workmanship and customer satisfaction.
+              <strong className="text-slate-950 font-bold">Archway Construction</strong> is driven by an experienced team of civil engineers, project managers, and skilled site supervisors dedicated to delivering dependable construction solutions with an emphasis on structural quality, transparency, fine workmanship, and customer satisfaction.
             </p>
 
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8">

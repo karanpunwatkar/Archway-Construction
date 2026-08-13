@@ -40,8 +40,8 @@ export const FinalCTA: React.FC = () => {
             </a>
           </div>
 
-          <p className="text-xs text-slate-500 mt-6 font-bold">
-            Archway Construction • Founder: {COMPANY_INFO.founder}
+          <p className="text-xs text-slate-500 mt-6 font-bold uppercase tracking-wider">
+            Archway Construction • Civil & Building Solutions
           </p>
 
         </div>

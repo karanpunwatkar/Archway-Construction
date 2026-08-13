@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
         {/* Founder & Trust Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs sm:text-sm font-bold tracking-wide mb-6 uppercase shadow-sm">
           <ShieldCheck className="w-4 h-4 text-amber-600" />
-          <span>Led by Founder {COMPANY_INFO.founder}</span>
+          <span>Expert Civil & Building Construction Team</span>
         </div>
 
         {/* Main Headline */}

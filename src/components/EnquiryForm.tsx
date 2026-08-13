@@ -57,7 +57,7 @@ export const EnquiryForm: React.FC = () => {
             QUICK <span className="navy-gradient-text">ENQUIRY FORM</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 font-medium">
-            Submit your project parameters below or connect directly with Founder Suraj Badke on WhatsApp.
+            Submit your project parameters below or connect directly with the Archway Construction team on WhatsApp.
           </p>
         </div>
 

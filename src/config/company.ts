@@ -57,7 +57,7 @@ export const getWhatsAppUrl = (customMessage?: string): string => {
 export const WHATSAPP_MESSAGES = {
   HERO_PRIMARY: `Hello ${COMPANY_INFO.name}, I am interested in getting a free consultation for my construction project.`,
   HERO_SECONDARY: `Hello ${COMPANY_INFO.name}, I am interested in discussing a construction project.`,
-  ABOUT_CTA: `Hello ${COMPANY_INFO.name}, I would like to discuss my project directly with Founder ${COMPANY_INFO.founder}.`,
+  ABOUT_CTA: `Hello ${COMPANY_INFO.name}, I would like to discuss my project directly with your construction team.`,
   SERVICES_GENERAL: `Hello ${COMPANY_INFO.name}, I would like to enquire about your construction services.`,
   PROJECTS_GENERAL: `Hello ${COMPANY_INFO.name}, I saw your completed projects and would like to discuss a project.`,
   LEAD_GEN: `Hello ${COMPANY_INFO.name}, I have a construction project in mind and would like to chat.`,
@@ -149,7 +149,7 @@ export const WHY_CHOOSE_US: TrustPoint[] = [
   {
     id: "direct",
     title: "DIRECT COMMUNICATION",
-    description: "Customers can connect directly with Founder Suraj Badke and the core Archway Construction team via WhatsApp.",
+    description: "Connect directly with the core Archway Construction engineering and execution team via WhatsApp.",
     iconName: "Smartphone"
   }
 ];
@@ -247,7 +247,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: "02",
     title: "DISCUSS YOUR PROJECT",
-    description: "Discuss your project scope, budget, timeline expectations, and site specifications directly with Founder Suraj Badke."
+    description: "Discuss your project scope, budget, timeline expectations, and site specifications directly with our construction team."
   },
   {
     step: "03",
@@ -273,7 +273,7 @@ export const FAQS: FAQItem[] = [
   {
     id: "faq-2",
     question: "Can I discuss my project directly on WhatsApp?",
-    answer: "Yes! Every CTA on our website connects you directly to Archway Construction on WhatsApp. You can share project details, site locations, or drawings directly with Founder Suraj Badke and our core team."
+    answer: "Yes! Every CTA on our website connects you directly to Archway Construction on WhatsApp. You can share project details, site locations, or drawings directly with our core engineering team."
   },
   {
     id: "faq-3",

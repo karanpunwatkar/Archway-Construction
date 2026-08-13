@@ -70,7 +70,7 @@ export const WhyChooseUs: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 whatsapp-gradient text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition-all"
           >
-            <span>CONNECT DIRECTLY WITH SURAJ BADKE ON WHATSAPP (+91 86986 57784)</span>
+            <span>CONNECT DIRECTLY WITH ARCHWAY CONSTRUCTION ON WHATSAPP (+91 86986 57784)</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

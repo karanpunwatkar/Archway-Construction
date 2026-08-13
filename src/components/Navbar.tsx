@@ -44,8 +44,8 @@ export const Navbar: React.FC = () => {
               <span className="font-black text-sm sm:text-base xl:text-lg tracking-wider text-slate-950 uppercase group-hover:text-blue-900 transition-colors leading-tight">
                 ARCHWAY <span className="text-amber-600">CONSTRUCTION</span>
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-widest text-slate-500 font-bold uppercase -mt-0.5">
-                Founder: {COMPANY_INFO.founder}
+              <span className="text-[9px] sm:text-[10px] tracking-widest text-amber-700 font-bold uppercase -mt-0.5">
+                Civil & Building Construction
               </span>
             </div>
           </a>

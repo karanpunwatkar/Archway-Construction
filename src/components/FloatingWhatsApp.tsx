@@ -13,7 +13,7 @@ export const FloatingWhatsApp: React.FC = () => {
         <div className="relative bg-white border border-emerald-300 text-slate-800 text-xs py-2.5 px-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce max-w-[250px]">
           <div>
             <span className="font-extrabold text-emerald-700 block text-[11px]">Need a construction quote?</span>
-            <span className="text-[11px] text-slate-600 font-medium">Chat with Founder Suraj Badke ({COMPANY_INFO.displayWhatsappNumber})</span>
+            <span className="text-[11px] text-slate-600 font-medium">Chat with the Archway Construction team ({COMPANY_INFO.displayWhatsappNumber})</span>
           </div>
           <button
             onClick={() => setShowTooltip(false)}

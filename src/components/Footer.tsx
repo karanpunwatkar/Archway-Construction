@@ -25,8 +25,8 @@ export const Footer: React.FC = () => {
                 <span className="font-extrabold text-xl tracking-wider text-slate-950 uppercase">
                   ARCHWAY <span className="text-amber-600">CONSTRUCTION</span>
                 </span>
-                <span className="text-[10px] tracking-widest text-slate-500 font-bold uppercase -mt-1">
-                  Founder: {COMPANY_INFO.founder}
+                <span className="text-[10px] tracking-widest text-amber-700 font-bold uppercase -mt-1">
+                  Civil & Building Solutions
                 </span>
               </div>
             </div>
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium">
-          <p>© {COMPANY_INFO.copyrightYear} {COMPANY_INFO.name}. Founder: {COMPANY_INFO.founder}. All Rights Reserved.</p>
+          <p>© {COMPANY_INFO.copyrightYear} {COMPANY_INFO.name}. All Rights Reserved.</p>
 
           <button
             onClick={scrollToTop}

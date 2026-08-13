@@ -1,6 +1,6 @@
 # Archway Construction 🏗️
 
-A modern, premium, conversion-focused marketing website built for **ARCHWAY CONSTRUCTION**, founded by **Suraj Badke**. Designed for maximum lead generation via a centralized WhatsApp integration system.
+A modern, premium, conversion-focused marketing website built for **ARCHWAY CONSTRUCTION**. Designed for maximum lead generation via a centralized WhatsApp integration system.
 
 ![Archway Construction Logo](./public/logo-transparent.png)
 
@@ -70,6 +70,5 @@ To update the WhatsApp number or contact details:
 ## 👤 Company Details
 
 - **Company Name**: Archway Construction
-- **Founder**: Suraj Badke
 - **WhatsApp Contact**: +91 86986 57784
 - **Services**: Residential Construction, Commercial Construction, Building Construction, Renovation & Remodeling, Civil & Structural Work, Project Consultation.

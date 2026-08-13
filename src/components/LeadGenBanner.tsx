@@ -29,7 +29,7 @@ export const LeadGenBanner: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed mb-10 font-medium">
-            Tell us what you're planning. Connect with Archway Construction directly on WhatsApp and discuss your project requirements with Founder <strong className="text-white font-extrabold">{COMPANY_INFO.founder}</strong>.
+            Tell us what you're planning. Connect with Archway Construction directly on WhatsApp and discuss your project requirements with our engineering team.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -47,7 +47,7 @@ export const LeadGenBanner: React.FC = () => {
 
           <div className="flex items-center justify-center gap-2 text-xs text-slate-300 mt-6 font-semibold">
             <Phone className="w-3.5 h-3.5 text-amber-400" />
-            <span>Direct WhatsApp: {COMPANY_INFO.displayWhatsappNumber} • Instant Founder Response</span>
+            <span>Direct WhatsApp: {COMPANY_INFO.displayWhatsappNumber} • Instant Team Response</span>
           </div>
 
         </div>
