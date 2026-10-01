@@ -13,6 +13,8 @@ export interface CompanyInfo {
     instagram: string;
     facebook: string;
     linkedin: string;
+    youtube?: string;
+    whatsapp?: string;
   };
   copyrightYear: number;
 }

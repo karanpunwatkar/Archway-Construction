@@ -34,9 +34,11 @@ export const COMPANY_INFO: CompanyInfo = {
   address: "Archway Construction Office, Maharashtra",
   
   socialLinks: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com"
+    instagram: "https://instagram.com", // Official Instagram placeholder
+    facebook: "https://facebook.com", // Official Facebook placeholder
+    linkedin: "https://linkedin.com", // Official LinkedIn placeholder
+    youtube: "https://youtube.com", // Official YouTube placeholder
+    whatsapp: "https://wa.me/918698657784"
   },
   
   copyrightYear: 2026
