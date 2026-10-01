@@ -21,8 +21,8 @@ import {
 export const COMPANY_INFO: CompanyInfo = {
   name: "ARCHWAY CONSTRUCTION",
   founder: "Suraj Badke",
-  tagline: "BUILDING SPACES. CREATING TOMORROW.",
-  subtagline: "Reliable construction solutions for residential, commercial and development projects — built with quality, precision and commitment.",
+  tagline: "BUILDING STRONG FOUNDATIONS. CREATING BETTER SPACES.",
+  subtagline: "A professional construction and finishing services company delivering reliable, quality-driven solutions for residential, commercial, and other construction projects.",
   
   // Real Editable WhatsApp Number (+91 86009 99829)
   whatsappNumber: "918600999829", 
@@ -71,46 +71,53 @@ export const WHATSAPP_MESSAGES = {
  */
 export const SERVICES: ServiceItem[] = [
   {
-    id: "residential",
-    title: "Residential Construction",
-    description: "Complete construction solutions for homes and residential properties, crafted with structural strength and fine workmanship.",
-    iconName: "Home",
-    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in residential construction services.`
-  },
-  {
-    id: "commercial",
-    title: "Commercial Construction",
-    description: "Tailored construction solutions for commercial buildings, retail, and business spaces focused on efficiency and modern aesthetics.",
-    iconName: "Building2",
-    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in commercial construction services.`
-  },
-  {
-    id: "building",
-    title: "Building Construction",
-    description: "End-to-end building construction with a strict focus on structural integrity, material quality, and execution precision.",
+    id: "rcc",
+    title: "RCC Construction",
+    description: "Reinforced Cement Concrete construction including foundations, columns, beams, slabs, and structural requirements — focused on strength, accuracy, and quality at every stage.",
     iconName: "Building",
-    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in building construction services.`
+    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in RCC construction services.`
   },
   {
-    id: "renovation",
-    title: "Renovation & Remodeling",
-    description: "Transform and upgrade existing structures with modern, practical, and aesthetically elevated construction solutions.",
-    iconName: "Hammer",
-    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in renovation & remodeling services.`
-  },
-  {
-    id: "civil",
-    title: "Civil & Structural Work",
-    description: "Professional civil engineering and structural construction services for foundation, layout, and heavy structural work.",
+    id: "brickwork",
+    title: "Brick Work & Plastering",
+    description: "Complete brick masonry and plastering services for residential and commercial projects — wall construction, internal and external plastering with focus on alignment and surface quality.",
     iconName: "Layers",
-    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in civil & structural work.`
+    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in brick work & plastering services.`
   },
   {
-    id: "consultation",
-    title: "Project Consultation",
-    description: "Discuss your construction requirements, structural planning, and receive clear guidance tailored to your project goals.",
+    id: "tiles",
+    title: "Tiles & Flooring",
+    description: "Tile installation for floors, walls, kitchens, bathrooms, and balconies — accurate measurement, level, alignment, and joint finishing for a clean, durable, and practical result.",
+    iconName: "Home",
+    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in tiles & flooring services.`
+  },
+  {
+    id: "pop",
+    title: "POP & False Ceiling",
+    description: "POP and false ceiling solutions that enhance interiors — ceiling designs, partitions, decorative elements, and finishing according to the requirements of each space.",
+    iconName: "Hammer",
+    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in POP & false ceiling work.`
+  },
+  {
+    id: "electrical",
+    title: "Electrical Work",
+    description: "Electrical installation and finishing for residential and commercial projects — wiring, switches, lighting points, electrical fittings, with systematic installation and neat routing.",
+    iconName: "Building2",
+    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in electrical work services.`
+  },
+  {
+    id: "plumbing",
+    title: "Plumbing Work",
+    description: "Plumbing installation and finishing including water supply lines, drainage systems, bathroom and kitchen connections, sanitary fittings, and all plumbing requirements.",
     iconName: "MessageSquare",
-    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in project consultation.`
+    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in plumbing work services.`
+  },
+  {
+    id: "finishing",
+    title: "Complete Finishing Work",
+    description: "Full-scope finishing activities — painting, waterproofing, flooring, sanitary fittings, electrical fittings, plumbing fixtures, doors, and all finishing requirements to complete your project.",
+    iconName: "Layers",
+    whatsappMessage: `Hello ${COMPANY_INFO.name}, I am interested in complete finishing work services.`
   }
 ];
 
@@ -121,38 +128,38 @@ export const WHY_CHOOSE_US: TrustPoint[] = [
   {
     id: "workmanship",
     title: "QUALITY WORKMANSHIP",
-    description: "Unwavering attention to construction quality, structural durability, and high-grade finishing.",
+    description: "Focused on workmanship, materials, detailing, and execution that meet the full requirements of every project.",
+    iconName: "ShieldCheck"
+  },
+  {
+    id: "execution",
+    title: "EXPERIENCED SITE EXECUTION",
+    description: "Systematic site execution with attention to sequencing, timelines, and practical construction delivery.",
+    iconName: "Wrench"
+  },
+  {
+    id: "materials",
+    title: "RELIABLE MATERIALS",
+    description: "Use of reliable materials and proven construction practices to ensure durability and structural integrity.",
+    iconName: "Clock"
+  },
+  {
+    id: "finishing",
+    title: "ATTENTION TO FINISHING",
+    description: "Careful attention to finishing and detailing from structural work through final handover of every project.",
     iconName: "ShieldCheck"
   },
   {
     id: "communication",
     title: "TRANSPARENT COMMUNICATION",
-    description: "Clear, honest, and regular progress updates provided directly to the client throughout the project lifecycle.",
+    description: "Clear, honest communication with clients throughout the project — no hidden surprises, no unclear commitments.",
     iconName: "MessageCircle"
   },
   {
-    id: "execution",
-    title: "RELIABLE EXECUTION",
-    description: "Focused approach toward completing every construction phase efficiently without compromising safety.",
-    iconName: "Clock"
-  },
-  {
-    id: "customer",
-    title: "CUSTOMER-FIRST APPROACH",
-    description: "Deep understanding of individual client requirements, budget constraints, and project expectations before execution.",
+    id: "services",
+    title: "MULTIPLE SERVICES UNDER ONE ROOF",
+    description: "RCC, brickwork, plastering, tiling, electrical, plumbing, and complete finishing — all under one construction team.",
     iconName: "Users"
-  },
-  {
-    id: "solutions",
-    title: "PROJECT-FOCUSED SOLUTIONS",
-    description: "Custom civil and structural solutions tailored specifically to individual project requirements.",
-    iconName: "Wrench"
-  },
-  {
-    id: "direct",
-    title: "DIRECT COMMUNICATION",
-    description: "Connect directly with the core Archway Construction engineering and execution team via WhatsApp.",
-    iconName: "Smartphone"
   }
 ];
 

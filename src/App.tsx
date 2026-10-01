@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HomeTab } from './components/HomeTab';
+import { AboutTab } from './components/AboutTab';
 import { ServicesTab } from './components/ServicesTab';
 import { ProjectsTab } from './components/ProjectsTab';
 import { ContactTab } from './components/ContactTab';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
 
-export type TabId = 'home' | 'services' | 'projects' | 'contact';
+export type TabId = 'home' | 'about' | 'services' | 'projects' | 'contact';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabId>('home');
@@ -21,6 +22,9 @@ export const App: React.FC = () => {
       <main className="flex-1 overflow-hidden relative">
         <div className={activeTab === 'home' ? 'block h-full' : 'hidden'}>
           <HomeTab onTabChange={setActiveTab} />
+        </div>
+        <div className={activeTab === 'about' ? 'block h-full' : 'hidden'}>
+          <AboutTab />
         </div>
         <div className={activeTab === 'services' ? 'block h-full' : 'hidden'}>
           <ServicesTab />

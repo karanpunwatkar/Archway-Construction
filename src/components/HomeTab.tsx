@@ -36,8 +36,8 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onTabChange }) => {
 
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-950 uppercase leading-tight mb-3 max-w-3xl">
-            BUILDING SPACES.{' '}
-            <span className="navy-gradient-text">CREATING TOMORROW.</span>
+            BUILDING STRONG FOUNDATIONS.{' '}
+            <span className="navy-gradient-text">CREATING BETTER SPACES.</span>
           </h1>
 
           {/* Sub */}
@@ -77,8 +77,8 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onTabChange }) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
           {[
-            { icon: <Home className="w-5 h-5 text-amber-600" />, title: 'Residential', sub: 'Home & Villa Construction', tab: 'services' as TabId },
-            { icon: <Building2 className="w-5 h-5 text-amber-600" />, title: 'Commercial', sub: 'Office & Retail Spaces', tab: 'services' as TabId },
+            { icon: <Home className="w-5 h-5 text-amber-600" />, title: 'About Us', sub: 'Mission, Vision & Values', tab: 'about' as TabId },
+            { icon: <Building2 className="w-5 h-5 text-amber-600" />, title: 'Services', sub: 'RCC, Tiles, Electrical…', tab: 'services' as TabId },
             { icon: <Layers className="w-5 h-5 text-amber-600" />, title: 'Projects', sub: 'View Our Work', tab: 'projects' as TabId },
             { icon: <MessageCircle className="w-5 h-5 text-amber-600" />, title: 'Contact', sub: 'Get a Quote Today', tab: 'contact' as TabId },
           ].map((card) => (

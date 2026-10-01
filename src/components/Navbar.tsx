@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Menu, X, MessageSquare, Phone, Home, Wrench, Layers, Mail } from 'lucide-react';
+import { Menu, X, MessageSquare, Phone, Home, Info, Wrench, Layers, Mail } from 'lucide-react';
 import { COMPANY_INFO, getWhatsAppUrl, WHATSAPP_MESSAGES } from '../config/company';
 import { TabId } from '../App';
 
 const TAB_LINKS: { id: TabId; label: string; icon: React.ReactNode }[] = [
   { id: 'home',     label: 'Home',     icon: <Home className="w-3.5 h-3.5" /> },
+  { id: 'about',    label: 'About',    icon: <Info className="w-3.5 h-3.5" /> },
   { id: 'services', label: 'Services', icon: <Wrench className="w-3.5 h-3.5" /> },
   { id: 'projects', label: 'Projects', icon: <Layers className="w-3.5 h-3.5" /> },
   { id: 'contact',  label: 'Contact',  icon: <Mail className="w-3.5 h-3.5" /> },
@@ -49,14 +50,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange }) => {
           </button>
 
           {/* Desktop Tab Pills */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {TAB_LINKS.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => handleTab(tab.id)}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-extrabold uppercase tracking-wider transition-all ${
+                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-extrabold uppercase tracking-wider transition-all ${
                     isActive
                       ? 'navy-gradient-bg text-white shadow-md'
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
@@ -90,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange }) => {
           </div>
 
           {/* Mobile: WhatsApp icon + hamburger */}
-          <div className="flex items-center gap-2 md:hidden shrink-0">
+          <div className="flex items-center gap-2 lg:hidden shrink-0">
             <a
               href={getWhatsAppUrl(WHATSAPP_MESSAGES.HERO_PRIMARY)}
               target="_blank"
@@ -113,15 +114,15 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange }) => {
 
       {/* Mobile Dropdown */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 px-4 pb-4 pt-2 shadow-lg">
-          <div className="grid grid-cols-2 gap-2 mb-3">
+        <div className="lg:hidden bg-white border-t border-slate-100 px-4 pb-4 pt-2 shadow-lg">
+          <div className="grid grid-cols-3 gap-2 mb-3">
             {TAB_LINKS.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => handleTab(tab.id)}
-                  className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all ${
+                  className={`flex flex-col items-center justify-center gap-1 py-2.5 rounded-xl text-[10px] font-extrabold uppercase tracking-wider transition-all ${
                     isActive
                       ? 'navy-gradient-bg text-white shadow-md'
                       : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -141,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange }) => {
               className="flex-1 whatsapp-gradient text-white font-extrabold text-xs uppercase tracking-wider text-center py-2.5 rounded-xl flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 fill-white" />
-              WhatsApp Chat
+              WhatsApp
             </a>
             <a
               href={`tel:${COMPANY_INFO.phoneNumber.replace(/\s+/g, '')}`}
