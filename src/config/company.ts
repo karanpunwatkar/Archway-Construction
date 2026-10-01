@@ -24,11 +24,11 @@ export const COMPANY_INFO: CompanyInfo = {
   tagline: "BUILDING SPACES. CREATING TOMORROW.",
   subtagline: "Reliable construction solutions for residential, commercial and development projects — built with quality, precision and commitment.",
   
-  // Real Editable WhatsApp Number (+91 86986 57784)
-  whatsappNumber: "918698657784", 
-  displayWhatsappNumber: "+91 86986 57784",
+  // Real Editable WhatsApp Number (+91 86009 99829)
+  whatsappNumber: "918600999829", 
+  displayWhatsappNumber: "+91 86009 99829",
   
-  phoneNumber: "+91 86986 57784",
+  phoneNumber: "+91 86009 99829",
   email: "contact@archwayconstruction.com",
   location: "Maharashtra, India",
   address: "Archway Construction Office, Maharashtra",
@@ -38,7 +38,7 @@ export const COMPANY_INFO: CompanyInfo = {
     facebook: "https://facebook.com", // Official Facebook placeholder
     linkedin: "https://linkedin.com", // Official LinkedIn placeholder
     youtube: "https://youtube.com", // Official YouTube placeholder
-    whatsapp: "https://wa.me/918698657784"
+    whatsapp: "https://wa.me/918600999829"
   },
   
   copyrightYear: 2026

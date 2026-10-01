@@ -22,7 +22,7 @@ export const StickyMobileCTA: React.FC = () => {
         className="w-full whatsapp-gradient text-white font-black text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
       >
         <MessageSquare className="w-5 h-5 fill-white" />
-        <span>Chat on WhatsApp (+91 86986 57784)</span>
+        <span>Chat on WhatsApp (+91 86009 99829)</span>
       </a>
     </div>
   );

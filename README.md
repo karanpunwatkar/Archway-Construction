@@ -8,7 +8,7 @@ A modern, premium, conversion-focused marketing website built for **ARCHWAY CONS
 
 ## 🚀 Primary Features
 
-- **Centralized WhatsApp Lead System**: Every CTA, service inquiry, project quote, and quick form submission routes directly to WhatsApp (`+91 86986 57784`).
+- **Centralized WhatsApp Lead System**: Every CTA, service inquiry, project quote, and quick form submission routes directly to WhatsApp (`+91 86009 99829`).
 - **Single Source of Truth Configuration**: Configured in `src/config/company.ts`. Updating the `whatsappNumber` field updates all links across the entire application instantly.
 - **Clean & Attractive Light Theme**: Designed with an architectural palette — pure white, soft slate neutrals, deep navy typography (`#0F172A`), warm amber accents (`#B45309`), and WhatsApp emerald green (`#25D366`).
 - **Full Showcase Suite**:
@@ -62,7 +62,7 @@ npm run build
 
 To update the WhatsApp number or contact details:
 1. Open `src/config/company.ts`
-2. Change `whatsappNumber: "918698657784"` to your desired phone number (with country code, no `+` or spaces).
+2. Change `whatsappNumber: "918600999829"` to your desired phone number (with country code, no `+` or spaces).
 3. Save the file. All CTAs across the entire website will automatically reflect the change.
 
 ---
@@ -70,5 +70,5 @@ To update the WhatsApp number or contact details:
 ## 👤 Company Details
 
 - **Company Name**: Archway Construction
-- **WhatsApp Contact**: +91 86986 57784
+- **WhatsApp Contact**: +91 86009 99829
 - **Services**: Residential Construction, Commercial Construction, Building Construction, Renovation & Remodeling, Civil & Structural Work, Project Consultation.
