@@ -2,8 +2,6 @@
 
 A modern, premium, conversion-focused marketing website built for **ARCHWAY CONSTRUCTION**. Designed for maximum lead generation via a centralized WhatsApp integration system.
 
-![Archway Construction Logo](./public/logo-transparent.png)
-
 ---
 
 ## 🚀 Primary Features
