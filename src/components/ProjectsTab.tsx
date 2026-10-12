@@ -1,8 +1,33 @@
 import React, { useState } from 'react';
-import { MapPin, MessageSquare, ArrowUpRight, Maximize2, Layers, Image as ImageIcon } from 'lucide-react';
+import { MapPin, MessageSquare, ArrowUpRight, Maximize2, Layers, Image as ImageIcon, Clock, CheckCircle, CalendarClock } from 'lucide-react';
 import { PROJECTS, GALLERY_ITEMS, getWhatsAppUrl, COMPANY_INFO } from '../config/company';
 import { ImageLightbox } from './ImageLightbox';
-import { GalleryItem } from '../types';
+import { GalleryItem, ProjectStatus } from '../types';
+
+// ─── Status badge config ──────────────────────────────────────────────────────
+const STATUS_CONFIG: Record<ProjectStatus, { label: string; dotColor: string; bg: string; text: string; icon: React.ReactNode }> = {
+  completed: {
+    label: 'Completed',
+    dotColor: 'bg-emerald-500',
+    bg: 'bg-emerald-50 border-emerald-200',
+    text: 'text-emerald-800',
+    icon: <CheckCircle className="w-3 h-3" />,
+  },
+  ongoing: {
+    label: 'In Progress',
+    dotColor: 'bg-amber-500',
+    bg: 'bg-amber-50 border-amber-200',
+    text: 'text-amber-800',
+    icon: <Clock className="w-3 h-3" />,
+  },
+  upcoming: {
+    label: 'Upcoming',
+    dotColor: 'bg-blue-500',
+    bg: 'bg-blue-50 border-blue-200',
+    text: 'text-blue-800',
+    icon: <CalendarClock className="w-3 h-3" />,
+  },
+};
 
 type View = 'projects' | 'gallery';
 
@@ -30,7 +55,7 @@ export const ProjectsTab: React.FC = () => {
             {view === 'projects' ? 'Featured Projects' : 'On-Site Gallery'}
           </h2>
           <p className="text-xs text-slate-500 font-medium">
-            {view === 'projects' ? 'Our completed construction showcase' : 'Real site execution visuals'}
+            {view === 'projects' ? `${PROJECTS.length} projects · completed, ongoing & upcoming` : 'Real site execution visuals'}
           </p>
         </div>
         <div className="flex items-center gap-2 shrink-0">
@@ -72,46 +97,71 @@ export const ProjectsTab: React.FC = () => {
         {/* Featured Projects */}
         {view === 'projects' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-            {PROJECTS.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 shadow-sm hover:shadow-md transition-all group flex flex-col"
-              >
-                <div className="relative h-44 overflow-hidden">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-md text-amber-800 text-[11px] font-black uppercase tracking-wider border border-amber-200">
-                    {project.category}
+            {PROJECTS.map((project) => {
+              const statusCfg = STATUS_CONFIG[project.status];
+              return (
+                <div
+                  key={project.id}
+                  className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-400 shadow-sm hover:shadow-md transition-all group flex flex-col"
+                >
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+
+                    {/* Status badge */}
+                    <div className={`absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-black uppercase tracking-wider border ${statusCfg.bg} ${statusCfg.text}`}>
+                      <span className={`w-1.5 h-1.5 rounded-full ${statusCfg.dotColor} ${project.status === 'ongoing' ? 'animate-pulse' : ''}`} />
+                      {statusCfg.icon}
+                      {statusCfg.label}
+                    </div>
+
+                    {/* Category chip */}
+                    <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-md text-amber-800 text-[10px] font-black uppercase tracking-wider border border-amber-200">
+                      {project.category}
+                    </div>
+
+                    {/* Location */}
+                    <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-slate-100 text-[11px] font-bold bg-slate-950/70 px-2 py-1 rounded-md">
+                      <MapPin className="w-3 h-3 text-amber-400" />
+                      {project.location}
+                    </div>
                   </div>
-                  <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-slate-100 text-[11px] font-bold bg-slate-950/70 px-2 py-1 rounded-md">
-                    <MapPin className="w-3 h-3 text-amber-400" />
-                    {project.location}
+                  <div className="p-4 flex flex-col flex-1">
+                    <h3 className="text-sm font-extrabold text-slate-950 uppercase tracking-wide mb-1 group-hover:text-amber-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed font-medium flex-1 mb-2">
+                      {project.description}
+                    </p>
+
+                    {/* Date tag */}
+                    {(project.completionDate || project.expectedDate) && (
+                      <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-bold mb-3">
+                        <Clock className="w-3 h-3 text-slate-400" />
+                        {project.status === 'completed'
+                          ? `Completed: ${project.completionDate}`
+                          : `Expected: ${project.expectedDate}`}
+                      </div>
+                    )}
+
+                    <a
+                      href={getWhatsAppUrl(project.whatsappMessage)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full whatsapp-gradient text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl flex items-center justify-center gap-1.5 hover:scale-105 transition-transform"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5 fill-white" />
+                      Discuss This Project
+                      <ArrowUpRight className="w-3.5 h-3.5 ml-auto" />
+                    </a>
                   </div>
                 </div>
-                <div className="p-4 flex flex-col flex-1">
-                  <h3 className="text-sm font-extrabold text-slate-950 uppercase tracking-wide mb-1 group-hover:text-amber-600 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed font-medium flex-1 mb-3">
-                    {project.description}
-                  </p>
-                  <a
-                    href={getWhatsAppUrl(project.whatsappMessage)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full whatsapp-gradient text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl flex items-center justify-center gap-1.5"
-                  >
-                    <MessageSquare className="w-3.5 h-3.5 fill-white" />
-                    Start Your Project
-                    <ArrowUpRight className="w-3.5 h-3.5 ml-auto" />
-                  </a>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 

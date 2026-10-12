@@ -34,14 +34,29 @@ export interface TrustPoint {
   iconName: string;
 }
 
+export type ProjectStatus = 'completed' | 'ongoing' | 'upcoming';
+
 export interface ProjectItem {
   id: string;
   title: string;
   category: 'Residential' | 'Commercial' | 'Renovation' | 'Civil Works';
+  status: ProjectStatus;
   location: string;
   description: string;
   imageUrl: string;
+  completionDate?: string;       // e.g. "March 2025" for completed
+  expectedDate?: string;         // e.g. "December 2026" for ongoing/upcoming
   whatsappMessage: string;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  location: string;
+  rating: number;               // 1–5
+  review: string;
+  projectType: string;
+  date: string;
 }
 
 export interface GalleryItem {
